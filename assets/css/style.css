@@ -1,0 +1,123 @@
+#main {
+ min-height: 10000px;
+}
+/* begin-header */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 5rem;
+    background-color: #333;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 99;
+}
+#header .logo {
+    
+}
+
+#header .logo  {
+    
+}
+#header .logo__img  { 
+    width: 10rem;
+    height: 5rem;
+    
+}
+#header .navbar  {
+    
+}
+
+#header .navbar__list {
+    
+}
+
+
+#header .navbar__list .navbar__list-item {
+    list-style: none;
+    display: inline-block;
+    
+    
+}
+#header .navbar__list .navbar__list-item a {
+    color: #ccc;
+    font-style: none;
+    text-decoration: none;
+    padding: 1.6rem;
+    font-size: 1rem;
+    font-size: 1.6rem;
+    border-radius: 1.6rem;
+}
+#header .navbar__list .navbar__list-item a:hover {
+    background-color: #ccc;
+    color:#333;
+    
+}
+
+#header #header__menu {
+    margin-top: 1.6rem;
+}
+
+#header #header__menu i{
+    color: #ccc;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    
+}
+
+#header #header__menu i:hover {
+    background-color: #ccc;
+    color:#333;
+}
+
+
+/* end header */
+/*  b0dy */
+#container {
+    
+}
+.content {
+    position: relative;
+    background: url(../img/7cc66639fc165e48070713.jpg) no-repeat center/ cover;
+    padding-top: 50%;
+}
+.content .slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    z-index: 1;
+    animation: animation  2s infinite linear;
+}
+
+@keyframes animation{
+    0%{
+        transform: translate(-50%, -50%);
+    }   
+
+    50%{
+        transform: translate(-50%,calc(-50% + 1rem));
+    }   
+    100%{
+        transform: translate(-50%, -50%);
+    } 
+}
+
+.content .slider .slider__name {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: #ccc;
+    text-shadow: 1px 1px rgba(51, 51, 51,0.4);
+}
+.content .slider .slider__desc {
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    color: #ccc;
+    text-shadow: 1px 1px rgba(51, 51, 51,0.4);
+    font-style: italic;
+    text-align: center;
+}
