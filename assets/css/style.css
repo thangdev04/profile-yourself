@@ -19,14 +19,24 @@
     
 }
 
-#header .logo  {
+#header .logo  a{
+    margin-top: 1rem;
+    display:flex;
+    text-decoration: none;
+}
+#header .logo__icon  { 
+    font-size: 1.6rem;
+    padding: 1rem 0 1rem 1rem;
+    color: #ccc;
+}
+
+#header .logo__name  { 
+    font-size: 1.6rem;
+    padding: 1rem;
+    color: #ccc;
     
 }
-#header .logo__img  { 
-    width: 10rem;
-    height: 5rem;
-    
-}
+
 #header .navbar  {
     
 }
@@ -39,17 +49,17 @@
 #header .navbar__list .navbar__list-item {
     list-style: none;
     display: inline-block;
-    
+    margin: 0 1.6rem;
     
 }
 #header .navbar__list .navbar__list-item a {
     color: #ccc;
     font-style: none;
     text-decoration: none;
-    padding: 1.6rem;
-    font-size: 1rem;
+    padding: 1rem;
     font-size: 1.6rem;
     border-radius: 1.6rem;
+    transition: background-color ease-in 0.3s;
 }
 #header .navbar__list .navbar__list-item a:hover {
     background-color: #ccc;
@@ -63,9 +73,9 @@
 
 #header #header__menu i{
     color: #ccc;
-    padding: 1.6rem;
+    padding: 1rem;
     font-size: 1.6rem;
-    
+    border-radius: 1.6rem;
 }
 
 #header #header__menu i:hover {
@@ -106,18 +116,24 @@
     } 
 }
 
+.content .slider {
+    width: 100%;
+    text-align: center;
+}
 .content .slider .slider__name {
-    font-size: 3rem;
+    font-size: 9rem;
     letter-spacing: 1px;
     color: #ccc;
     text-shadow: 1px 1px rgba(51, 51, 51,0.4);
+    padding:  3rem 3rem;
 }
 .content .slider .slider__desc {
-    margin-top: 1.6rem;
-    font-size: 1.6rem;
+    margin-top: 3rem;
+    font-size: 3rem;
     letter-spacing: 1px;
     color: #ccc;
     text-shadow: 1px 1px rgba(51, 51, 51,0.4);
     font-style: italic;
     text-align: center;
+    padding: 1rem;
 }
