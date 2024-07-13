@@ -8,7 +8,7 @@
     left: 0;
     right: 0;
     display: flex;
-    width: 100%;
+    
     height: 5rem;
     background-color: #333;
     justify-content: space-between;
@@ -19,22 +19,24 @@
     
 }
 
-#header .logo  a{
+#header .logo__list{
     margin-top: 1rem;
     display:flex;
     text-decoration: none;
+    background-color: rgba(101, 101, 101, 0.4);
 }
 #header .logo__icon  { 
-    font-size: 1.6rem;
-    padding: 1rem 0 1rem 1rem;
-    color: #ccc;
+    letter-spacing: 0.5rem;
+    color: rgb(236, 77, 77);
 }
 
 #header .logo__name  { 
-    font-size: 1.6rem;
-    padding: 1rem;
-    color: #ccc;
-    
+    letter-spacing: 0.1rem;
+}
+
+
+#header .logo__name span {
+    color: green;
 }
 
 #header .navbar  {
@@ -52,12 +54,12 @@
     margin: 0 1.6rem;
     
 }
-#header .navbar__list .navbar__list-item a {
-    color: #ccc;
+#header  .navbar__list-item a {
+    
     font-style: none;
     text-decoration: none;
-    padding: 1rem;
-    font-size: 1.6rem;
+    
+    margin-top: 1rem;
     border-radius: 1.6rem;
     transition: background-color ease-in 0.3s;
 }
@@ -68,13 +70,11 @@
 }
 
 #header #header__menu {
-    margin-top: 1.6rem;
+
 }
 
 #header #header__menu i{
-    color: #ccc;
-    padding: 1rem;
-    font-size: 1.6rem;
+    
     border-radius: 1.6rem;
 }
 
@@ -85,22 +85,21 @@
 
 
 /* end header */
-/*  b0dy */
-#container {
-    
-}
-.content {
+/* slidewr */
+.slider {
     position: relative;
     background: url(../img/7cc66639fc165e48070713.jpg) no-repeat center/ cover;
     padding-top: 50%;
+    text-align: center;
 }
-.content .slider {
+
+.slider__position {
     position: absolute;
     top: 50%;
     left: 50%;
-    
     z-index: 1;
     animation: animation  2s infinite linear;
+    width: 100%;
 }
 
 @keyframes animation{
@@ -116,24 +115,85 @@
     } 
 }
 
-.content .slider {
-    width: 100%;
-    text-align: center;
-}
-.content .slider .slider__name {
-    font-size: 9rem;
-    letter-spacing: 1px;
-    color: #ccc;
-    text-shadow: 1px 1px rgba(51, 51, 51,0.4);
+
+.slider .slider__name {
+    font-size: 6rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 0.1rem 0.1rem rgba(51, 51, 51,0.4);
     padding:  1.6rem ;
 }
-.content .slider .slider__desc {
+.slider .slider__desc {
     margin-top: 1.6rem;
     font-size: 3rem;
-    letter-spacing: 1px;
-    color: #ccc;
+    letter-spacing: 0.1rem;
     text-shadow: 1px 1px rgba(51, 51, 51,0.4);
     font-style: italic;
     text-align: center;
-    padding: 1rem;
+}
+/*  b0dy */
+#container {
+    
+}
+#content {
+    width: 100%;
+    background-color: #333; 
+}
+
+/* about */
+#about {
+ padding-top: 15rem;
+    
+}
+#about .about__list {
+    position: relative;
+    background: url(../img/4KG2VgKFDJWqdtg4UMRqk5CnkJVoCpe5QMd20Pf7.jpg) no-repeat top / cover;
+    padding-top: 50%;
+    
+}
+
+#about .about__me {
+    position: absolute;
+    top: -8rem;
+    left: 0;
+    right: 0;
+    font-size: 6rem;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 100;
+    letter-spacing: 0.5rem;
+}
+
+#about .about__me-item1 {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 20rem;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+    
+}
+
+#about .about__me-item2 {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    width: 20rem;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+    
+}
+
+#about .about__me-resume {
+    display: inline-block;
+    background-color: #5f5d5d;
+    color:#ccc;
+    border-radius: 1.6rem;
+    border: none;
+    transition: background-color ease-in 0.3s;
+    text-align: center;
+    text-decoration: none;
+}
+#about .about__me-resume:hover {
+    background-color: #ccc;
+    color: #333;
 }

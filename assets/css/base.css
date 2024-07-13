@@ -6,3 +6,27 @@ html {
     scroll-behavior: smooth;
 }
 
+
+.row__full {
+    width: 100%;
+}
+
+.padding__botton {
+    padding: 1rem
+}
+
+.font__text {
+    font-size: 1.6rem;
+}
+
+.margin__top{
+    margin-top: 1.6rem;
+
+}
+
+.color__text {
+    color: #ccc;
+} 
+.spacing__text {
+    
+}
