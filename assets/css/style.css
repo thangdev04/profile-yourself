@@ -87,6 +87,7 @@
 /* end header */
 /* slidewr */
 .slider {
+    margin-top: 5rem;
     position: relative;
     background: url(../img/7cc66639fc165e48070713.jpg) no-repeat center/ cover;
     padding-top: 50%;
@@ -117,13 +118,12 @@
 
 
 .slider .slider__name {
-    font-size: 6rem;
+    
     letter-spacing: 0.1rem;
     text-shadow: 0.1rem 0.1rem rgba(51, 51, 51,0.4);
     padding:  1.6rem ;
 }
 .slider .slider__desc {
-    margin-top: 1.6rem;
     font-size: 3rem;
     letter-spacing: 0.1rem;
     text-shadow: 1px 1px rgba(51, 51, 51,0.4);
@@ -141,31 +141,33 @@
 
 /* about */
 #about {
- padding-top: 15rem;
+ 
     
 }
 #about .about__list {
     position: relative;
     background: url(../img/4KG2VgKFDJWqdtg4UMRqk5CnkJVoCpe5QMd20Pf7.jpg) no-repeat top / cover;
-    padding-top: 50%;
+    padding-top: 60%;
     
 }
 
 #about .about__me {
     position: absolute;
-    top: -8rem;
+    top: 0;
     left: 0;
     right: 0;
-    font-size: 6rem;
+    
     text-align: center;
-    text-decoration: underline;
+    
     font-weight: 100;
     letter-spacing: 0.5rem;
+    background-color: rgba(51, 51, 51);
+    
 }
 
 #about .about__me-item1 {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 5%;
     width: 20rem;
     letter-spacing: 0.1rem;
@@ -196,4 +198,84 @@
 #about .about__me-resume:hover {
     background-color: #ccc;
     color: #333;
+}
+
+/* gallery */
+
+#gallery {
+    position: relative;
+    margin-top: 1.6rem;
+}
+
+#gallery:hover h3{
+    display: none;
+}
+#gallery h3 {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px rgba(51, 51, 51,1);
+}
+
+#gallery .gallery__list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+}
+
+#gallery .gallery__list-item {
+    position: relative;
+    width: 100%;
+    background-color: #333;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#gallery .gallery__list-item .gallery__img {
+        background: url(../img/cbe022e6b8c91a9743d89.jpg) no-repeat center/cover;
+        padding-top: 50%;
+        opacity: 1;
+        transition: opacity 0.4s ease-in;
+        transition: transform 0.8s ease-in-out;
+}
+
+#gallery .gallery__list-item:hover  .gallery__img {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+
+#gallery .gallery__list-item p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    display: none;
+    letter-spacing: 0.1rem;
+}
+
+#gallery .gallery__list-item:hover p {
+    display:block;
+}
+#gallery .gallery__list-item .ti-share-alt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.6rem;
+    padding: 1rem;
+    display:none;
+    color: #fff;
+}
+#gallery .gallery__list-item:hover i {
+    display:block;
+}
+
+#gallery .gallery__list-item .ti-share-alt:hover{
+    opacity: 0.8;
 }

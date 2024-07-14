@@ -11,3 +11,19 @@ const headerHeight = header.clientHeight;
         }
     }
 
+    const menuItems = document.querySelectorAll('.navbar li a[href*="#"]');
+        
+    
+    for( const menuItem of menuItems){
+       
+        menuItem.addEventListener('click',function(event){
+            const isParrentMenu =  menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav') ;
+            if(isParrentMenu){
+                event.preventDefault();
+            }else{
+                header.style.height = null;
+                
+            }
+            
+        } )
+    }

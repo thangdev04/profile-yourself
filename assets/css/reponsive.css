@@ -2,12 +2,16 @@
 @media only screen and  (min-width: 64em) {
     /* class chung */
 
+
+
     #header__menu {
         display: none;
     }
     #header .navbar__list .navbar__list-item {
         margin-top: 1.6rem;
     }
+    /* SLIDER */
+    
 
     /* about */
     #about .about__me-item1 {
@@ -50,9 +54,13 @@
 
 /* mobile */
 @media only screen and   (max-width:  47.9375em) {
+    /* class chung */
+    
+
+
     /* begin-header */
     .navbar {
-        margin-left: 10rem;
+        margin-left: 4rem;
         width: 100%;
     }
 
@@ -74,29 +82,29 @@
     }
 
     /* begin about */
-    #about {
-        padding-top: 10rem;
-           
-       }
+    
+
+
     #about .about__me {
-        top: -6rem;
         font-size: 3rem;
     }
 
     #about .about__me-item1 {
-        top: 0;
+        top: 28%;
         font-size: 1rem;
         width: 10rem;
         letter-spacing: 0.0rem;
+        line-height: normal;
     }
     #about .about__me-item2 {
-        top: 0;
+        top: 28%;
         font-size: 1rem;
         width: 10rem;
-            
+        line-height: normal;
     }
 
     #about .about__me-resume {
+        margin-top: 0.1rem;
         font-size: 1rem;
     }
 }

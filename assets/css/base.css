@@ -15,8 +15,12 @@ html {
     padding: 1rem
 }
 
-.font__text {
+.font__text-small {
     font-size: 1.6rem;
+}
+
+.font__text-big {
+    font-size: 6rem;
 }
 
 .margin__top{
