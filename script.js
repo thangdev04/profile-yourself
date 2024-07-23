@@ -27,3 +27,28 @@ const headerHeight = header.clientHeight;
             
         } )
     }
+    const buyBtns = document.querySelectorAll('.btn__share')
+    const modal = document.querySelector('.js-share')
+    const modalContainer = document.querySelector('.share__box')
+    const modalClose = document.querySelector('.close')
+    // ham hien thi( thêm class vào modal để có display: flex)
+    function showTickets(){
+        modal.classList.add('open')
+    }
+    // hàm gỡ classs open 
+    function closeTickets(){
+        modal.classList.remove('open')
+    }
+    // lặp qua từng thẻ btn và nghe hàng vi
+    for(const buyBtn of buyBtns){
+    
+        buyBtn.addEventListener('click',showTickets)
+    }
+    // nghe hành vi click 
+    modalClose.addEventListener('click', closeTickets)
+    
+    modal.addEventListener('click',closeTickets)
+    
+    modalContainer.addEventListener('click', function(event){
+        event.stopPropagation()
+    })

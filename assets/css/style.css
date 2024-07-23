@@ -1,5 +1,5 @@
 #main {
- min-height: 10000px;
+    
 }
 /* begin-header */
 #header{
@@ -135,6 +135,7 @@
     
 }
 #content {
+    
     width: 100%;
     background-color: #333; 
 }
@@ -156,10 +157,8 @@
     top: 0;
     left: 0;
     right: 0;
-    
     text-align: center;
-    
-    font-weight: 100;
+    font-weight: 700;
     letter-spacing: 0.5rem;
     background-color: rgba(51, 51, 51);
     
@@ -204,19 +203,23 @@
 
 #gallery {
     position: relative;
-    margin-top: 1.6rem;
 }
 
-#gallery:hover h3{
-    display: none;
-}
+
 #gallery h3 {
     position: absolute;
     z-index: 3;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -90%);
     text-shadow: 1px 1px rgba(51, 51, 51,1);
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+    font-family: 700;
+}
+
+#gallery:hover h3{
+    opacity: 0;
 }
 
 #gallery .gallery__list{
@@ -239,7 +242,7 @@
         padding-top: 50%;
         opacity: 1;
         transition: opacity 0.4s ease-in;
-        transition: transform 0.8s ease-in-out;
+        transition: transform  0.8s ease-in-out;
 }
 
 #gallery .gallery__list-item:hover  .gallery__img {
@@ -263,7 +266,7 @@
 #gallery .gallery__list-item:hover p {
     display:block;
 }
-#gallery .gallery__list-item .ti-share-alt {
+#gallery .gallery__list-item .btn__share {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -272,10 +275,253 @@
     display:none;
     color: #fff;
 }
+
 #gallery .gallery__list-item:hover i {
     display:block;
 }
 
 #gallery .gallery__list-item .ti-share-alt:hover{
     opacity: 0.8;
+}
+
+/* contact */
+#contact {
+    position: relative;
+    width: 100%;
+}
+
+#contact h3 {
+    position: absolute;
+    top: 5rem;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 6rem;
+    letter-spacing: 0.4rem;
+}
+
+#contact p{
+    position: absolute;
+    top: 15rem;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+#contact .contact__container {
+    width: 80%;
+    padding-top: 25rem ;
+    padding-bottom: 5rem;
+    margin: 0 auto ;
+    display: flex;
+    
+}
+
+#contact .contact__container .contact__icon{
+    flex-basis: 50%;
+}
+
+#contact .contact__icon li{
+    list-style: none;
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+
+#contact .contact__icon a{
+    
+}
+#contact .contact__container .contact__text{
+    flex-basis: 50%;
+    
+}
+
+#contact  .contact__text .contact__text-item{
+    display: inline-block;
+}
+
+#contact  .contact__text .contact__text-Name{
+    width: 45%;
+    font-size: 1.6rem;
+}
+#contact  .contact__text .contact__text-Email{
+    width: 45%;
+    float: right;
+    font-size: 1.6rem;
+}
+
+#contact  .contact__text .contact__text-Message{
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+#contact  .contact__text .contact__text-botton{
+    margin-top: 2rem;
+    float: right;
+    background-color: #ccc;
+    color: #333;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    outline: none;
+}
+
+#contact  .contact__text .contact__text-botton:hover{
+    opacity: 0.8;
+}
+
+#contact  .map {
+    width: 100%;
+    background: url(../img/map.jpg) no-repeat center/ cover;
+    padding-top: 50%;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    min-height: 1rem;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+}
+#footer .box {
+    
+    width: 80%;
+    margin: 0 auto;
+}
+#footer h3{
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    border-bottom: 0.5rem solid #ccc;
+}
+
+#footer .icon__list {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+}
+#footer .icon__list .icon__list-item {
+    margin: 0 2rem;
+    list-style: none;
+}
+
+#footer  .icon__list-item a{
+    text-decoration: none;
+    padding: 1rem;
+}
+
+#footer  .icon__list-item a:hover{
+    opacity: 0.8;
+}
+
+#footer  .icon__list-item i{
+    color: #ccc;
+    font-size: 1.6rem;
+}
+/* share */
+
+.share ,
+.open{
+    display: flex;
+}
+
+.share {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:  rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 60;
+    display: none;
+}
+
+.share__box{
+    margin:0 1.6rem;
+    position: relative;
+    background-color: #fff;
+    width: 60rem;
+    min-height: 20rem;
+    animation: presently ease-in 0.5 ;
+    text-align: center;
+}
+
+@keyframes presently{
+    from{
+        opacity: 0;
+        transform:translateX(-14rem);
+    }
+
+    to{
+        opacity: 1;
+        transform:translateX(0);
+    }
+}
+
+.share .share__list {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.share .share__list .share__list-item{
+    margin: 0 2rem;
+    list-style: none;
+    padding: 1rem;
+    font-size: 1.6rem;
+    
+}
+.share .share__list .share__list-item a{
+    color:#333;
+}
+
+.share .share__list .share__list-item:hover a{
+    opacity: 0.7;
+}
+
+.share .share__box .form__link{
+    margin-top: 2rem
+    
+}
+
+.share .share__box .form__link .link__copy{
+    border: 0.2rem solid #000;
+}
+.share .share__box .form__link .btn__copy{
+    border: 0.2rem solid #000;
+    cursor: pointer;
+}
+
+.share .share__box .form__link .btn__copy:hover{
+    opacity: 0.6;
+}
+
+.share .share__box .close{
+    font-size: 1.6rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.share .share__box .close:hover{
+   
+    background-color: #ccc;
 }
